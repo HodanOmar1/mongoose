@@ -26,22 +26,14 @@ const app = () => {
     }
     else if (command === "update") {
         if (watchedInput) {
-        filter ({title: titleInput}), update ({watched:true});
+        update ({title: titleInput},{watched: true});
         }
     }
     else if (command === "remove" ) {
-        if (actorInput) {
-     search ({title: titleInput}), cancel ({title: titleInput});
+        if (titleInput) {
+     remove ({title: titleInput});
     }
 }
-        // list function goes here //
-    // } else if ( command === "update" ) {
-    
-    //     // update function goes here //
-    // } else if (command === "delete") {
-    //     // delete function goes here //
-    // }
-};
-
+}
 
     app();

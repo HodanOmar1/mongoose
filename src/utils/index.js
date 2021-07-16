@@ -22,7 +22,7 @@ exports.list = async () => {
 
 exports.update = async  (filter, update) => {
     try {
-       const updateMovie = await Movie.findOneandUpdate(filter, update);
+       const updateMovie = await Movie.findOneAndUpdate(filter, update);
        console.log(updateMovie);
     } catch (error) {
         console.log(error);
@@ -30,12 +30,12 @@ exports.update = async  (filter, update) => {
 
 }
 
-exports.remove = async (filter) => {
+exports.remove = async (search) => {
    try {
-       const removeMovie = await Movie.findOneandRemove(search, cancel);
+       const removeMovie = await Movie.findOneAndDelete(search);
        console.log(removeMovie);
     } catch (error) {
         console.log(error);
-    };
+    }
     
 };
